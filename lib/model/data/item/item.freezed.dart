@@ -24,7 +24,7 @@ mixin _$Item {
   String get name => throw _privateConstructorUsedError;
   String get imageUrl => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
-  String get category => throw _privateConstructorUsedError;
+  ItemCategory get category => throw _privateConstructorUsedError;
   List<String> get options => throw _privateConstructorUsedError;
   int get price => throw _privateConstructorUsedError;
 
@@ -43,7 +43,7 @@ abstract class $ItemCopyWith<$Res> {
       String name,
       String imageUrl,
       String description,
-      String category,
+      ItemCategory category,
       List<String> options,
       int price});
 }
@@ -89,7 +89,7 @@ class _$ItemCopyWithImpl<$Res, $Val extends Item>
       category: null == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
-              as String,
+              as ItemCategory,
       options: null == options
           ? _value.options
           : options // ignore: cast_nullable_to_non_nullable
@@ -113,7 +113,7 @@ abstract class _$$_ItemCopyWith<$Res> implements $ItemCopyWith<$Res> {
       String name,
       String imageUrl,
       String description,
-      String category,
+      ItemCategory category,
       List<String> options,
       int price});
 }
@@ -155,7 +155,7 @@ class __$$_ItemCopyWithImpl<$Res> extends _$ItemCopyWithImpl<$Res, _$_Item>
       category: null == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
-              as String,
+              as ItemCategory,
       options: null == options
           ? _value._options
           : options // ignore: cast_nullable_to_non_nullable
@@ -192,7 +192,7 @@ class _$_Item with DiagnosticableTreeMixin implements _Item {
   @override
   final String description;
   @override
-  final String category;
+  final ItemCategory category;
   final List<String> _options;
   @override
   List<String> get options {
@@ -264,7 +264,7 @@ abstract class _Item implements Item {
       required final String name,
       required final String imageUrl,
       required final String description,
-      required final String category,
+      required final ItemCategory category,
       required final List<String> options,
       required final int price}) = _$_Item;
 
@@ -279,7 +279,7 @@ abstract class _Item implements Item {
   @override
   String get description;
   @override
-  String get category;
+  ItemCategory get category;
   @override
   List<String> get options;
   @override
